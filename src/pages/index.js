@@ -4,9 +4,9 @@ import Layout from '../components/layout';
 
 const IndexPage = () => {
   return (
-    <Layout page="Home">
+    <Layout>
       <div>
-        Isaac
+        hello
       </div>
     </Layout>
   )

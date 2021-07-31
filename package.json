@@ -15,6 +15,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.3",
     "gatsby": "^3.10.2",
     "gatsby-plugin-gatsby-cloud": "^2.10.1",
     "gatsby-plugin-manifest": "^3.10.0",
