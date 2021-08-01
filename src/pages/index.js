@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout';
-import PostLink from '../components/postLink';
+import PostPreview from '../components/postPreview';
 import { graphql } from "gatsby"
 
 const IndexPage = ({
@@ -15,7 +15,7 @@ const IndexPage = ({
         <div className="text-gray-900 text-3xl text-base mb-4">
           Featured Projects
         </div>
-        {edges.map(edge => <PostLink post={edge.node} />)}
+        {edges.map(edge => <PostPreview post={edge.node} />)}
       </div>
     </Layout>
   )
@@ -30,10 +30,14 @@ export const pageQuery = graphql`
         node {
           id
           excerpt(pruneLength: 250)
+          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug
             title
+            type
+            author
+            tags
           }
         }
       }

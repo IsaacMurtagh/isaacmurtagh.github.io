@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import Link from './link';
 import { MenuIcon, CodeIcon } from '@heroicons/react/solid'
-import { PresentationChartBarIcon, HomeIcon } from '@heroicons/react/Outline'
+import { DesktopComputerIcon, HomeIcon } from '@heroicons/react/Outline'
 import { Popover, Transition } from '@headlessui/react'
 
-const solutions = [
+const menuItems = [
   {
     name: 'Home',
     description: 'Take me home, Country Road...',
@@ -12,15 +12,15 @@ const solutions = [
     icon: HomeIcon,
   },
   {
-    name: 'Projects',
-    description: 'A list of my projects i\'ve been working on',
-    link: '/',
-    icon: PresentationChartBarIcon,
+    name: 'My Web App',
+    description: 'I created a quiz game you can play with friends',
+    link: 'https://app.admiradoco.com',
+    icon: DesktopComputerIcon,
   },
   {
     name: 'Github',
     description: 'This site is open source, have a look at how i\'ve created it.',
-    link: '/',
+    link: 'https://github.com/IsaacMurtagh/portfolio-gatsby',
     icon: CodeIcon,
   },
 ]
@@ -54,10 +54,10 @@ const navbar = () => {
               <Popover.Panel className="absolute z-10 w-screen max-w-sm px-4 mt-2 transform -translate-x-full left-full sm:px-0 lg:max-w-3xl">
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                    {solutions.map((item) => (
+                    {menuItems.map((item) => (
                       <Link
                         key={item.name}
-                        to="/"
+                        to={item.link}
                         className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       >
                         <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 sm:h-12 sm:w-12">

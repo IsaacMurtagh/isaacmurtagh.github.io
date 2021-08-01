@@ -3,6 +3,8 @@ slug: "/projects/serverless-quizzes/"
 date: "2021-08-01"
 title: "Serverless Quiz Game"
 tags: ['AWS Lambda', 'AWS Api Gateway', 'AWS Cloudformation', 'DynamoDb', 'Node.js']
+type: 'project'
+author: 'Isaac Murtagh'
 ---
 
 # Serverless multi-choice quiz API!

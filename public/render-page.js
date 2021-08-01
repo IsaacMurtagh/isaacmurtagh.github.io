@@ -15,8 +15,7 @@
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js")),
-  "component---src-pages-index-js": preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")),
-  "component---src-pages-markdown-remark-frontmatter-slug-js": preferDefault(__webpack_require__(/*! ./src/pages/{MarkdownRemark.frontmatter__slug}.js */ "./src/pages/{MarkdownRemark.frontmatter__slug}.js"))
+  "component---src-pages-index-js": preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))
   }
 
 
@@ -22158,6 +22157,49 @@ const Layout = ({
 
 /***/ }),
 
+/***/ "./src/components/link.js":
+/*!********************************!*\
+  !*** ./src/components/link.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+
+
+
+const Link = ({
+  children,
+  to,
+  activeClassName,
+  partiallyActive,
+  ...other
+}) => {
+  const internal = /^\/(?!\/)/.test(to);
+
+  if (internal) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, Object.assign({
+      to: to,
+      activeClassName: activeClassName,
+      partiallyActive: partiallyActive
+    }, other), children);
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", Object.assign({
+    href: to
+  }, other), children);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Link);
+
+/***/ }),
+
 /***/ "./src/components/navMenu.js":
 /*!***********************************!*\
   !*** ./src/components/navMenu.js ***!
@@ -22171,7 +22213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./link */ "./src/components/link.js");
 /* harmony import */ var _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/solid */ "./node_modules/@heroicons/react/solid/esm/index.js");
 /* harmony import */ var _heroicons_react_Outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/Outline */ "./node_modules/@heroicons/react/Outline/esm/index.js");
 /* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @headlessui/react */ "./node_modules/@headlessui/react/dist/components/popover/popover.esm.js");
@@ -22181,20 +22223,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const solutions = [{
+const menuItems = [{
   name: 'Home',
   description: 'Take me home, Country Road...',
   link: '/',
   icon: _heroicons_react_Outline__WEBPACK_IMPORTED_MODULE_3__.HomeIcon
 }, {
-  name: 'Projects',
-  description: 'A list of my projects i\'ve been working on',
-  link: '/',
-  icon: _heroicons_react_Outline__WEBPACK_IMPORTED_MODULE_3__.PresentationChartBarIcon
+  name: 'My Web App',
+  description: 'I created a quiz game you can play with friends',
+  link: 'https://app.admiradoco.com',
+  icon: _heroicons_react_Outline__WEBPACK_IMPORTED_MODULE_3__.DesktopComputerIcon
 }, {
   name: 'Github',
   description: 'This site is open source, have a look at how i\'ve created it.',
-  link: '/',
+  link: 'https://github.com/IsaacMurtagh/portfolio-gatsby',
   icon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__.CodeIcon
 }];
 
@@ -22225,9 +22267,9 @@ const navbar = () => {
     className: "overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "relative grid gap-8 bg-white p-7 lg:grid-cols-2"
-  }, solutions.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, menuItems.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_link__WEBPACK_IMPORTED_MODULE_1__.default, {
     key: item.name,
-    to: "/",
+    to: item.link,
     className: "flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex items-center justify-center flex-shrink-0 w-10 h-10 sm:h-12 sm:w-12"
@@ -22289,7 +22331,7 @@ const navbar = ({
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "/",
     className: "flex items-center space-x-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_1__.CodeIcon, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_1__.TerminalIcon, {
     className: "h-12 w-12"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "text-xl"
@@ -22302,10 +22344,10 @@ const navbar = ({
 
 /***/ }),
 
-/***/ "./src/components/postLink.js":
-/*!************************************!*\
-  !*** ./src/components/postLink.js ***!
-  \************************************/
+/***/ "./src/components/postPreview.js":
+/*!***************************************!*\
+  !*** ./src/components/postPreview.js ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -22321,15 +22363,47 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Layout = ({
+const PostPreview = ({
   post
 }) => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: ""
-  }, post.excerpt);
+  const {
+    title,
+    slug,
+    author,
+    date,
+    type
+  } = post.frontmatter;
+  const {
+    excerpt,
+    timeToRead
+  } = post;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    className: "inline-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "bg-indigo-100 text-indigo-800 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
+  }, type))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: slug,
+    className: "block mt-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "text-xl font-semibold text-gray-900"
+  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "mt-3 text-base text-gray-500"
+  }, excerpt)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "mt-6 flex items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "ml-3"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "text-sm font-medium text-gray-900"
+  }, author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "flex space-x-1 text-sm text-gray-500"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("time", {
+    dateTime: date
+  }, date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "aria-hidden": "true"
+  }, "\xB7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, timeToRead, " min read")))));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PostPreview);
 
 /***/ }),
 
@@ -22355,9 +22429,7 @@ const projects = [{
   preview: 'I used AWS to create a serverless API for multi choice quizzes you can play with your friends online, in real time!'
 }];
 
-const Layout = ({
-  page
-}) => {
+const SideFeed = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "p-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -22384,7 +22456,7 @@ const Layout = ({
   }, project.preview)))))));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SideFeed);
 
 /***/ }),
 
@@ -22461,7 +22533,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
-/* harmony import */ var _components_postLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/postLink */ "./src/components/postLink.js");
+/* harmony import */ var _components_postPreview__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/postPreview */ "./src/components/postPreview.js");
 
 
 
@@ -22480,56 +22552,13 @@ const IndexPage = ({
     className: "p-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "text-gray-900 text-3xl text-base mb-4"
-  }, "Featured Projects"), edges.map(edge => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_postLink__WEBPACK_IMPORTED_MODULE_2__.default, {
+  }, "Featured Projects"), edges.map(edge => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_postPreview__WEBPACK_IMPORTED_MODULE_2__.default, {
     post: edge.node
   }))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
-const pageQuery = "1448896683";
-
-/***/ }),
-
-/***/ "./src/pages/{MarkdownRemark.frontmatter__slug}.js":
-/*!*********************************************************!*\
-  !*** ./src/pages/{MarkdownRemark.frontmatter__slug}.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Template)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
-
-
-function Template({
-  data // this prop will be injected by the GraphQL query below.
-
-}) {
-  const {
-    markdownRemark
-  } = data; // data.markdownRemark holds your post data
-
-  const {
-    frontmatter,
-    html
-  } = markdownRemark;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, {
-    page: frontmatter.title
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "p-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
-    className: "prose",
-    dangerouslySetInnerHTML: {
-      __html: html
-    }
-  })));
-}
-const pageQuery = "1238545120";
+const pageQuery = "3145733783";
 
 /***/ }),
 

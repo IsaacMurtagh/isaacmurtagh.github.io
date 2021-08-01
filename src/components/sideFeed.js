@@ -9,7 +9,7 @@ const projects = [
   }
 ]
 
-const Layout = ({ page }) => {
+const SideFeed = () => {
   return (
   <div className="p-4">
     <div className="text-gray-900 text-xl text-base">
@@ -37,4 +37,4 @@ const Layout = ({ page }) => {
   )
 }
 
-export default Layout
+export default SideFeed
