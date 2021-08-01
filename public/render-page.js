@@ -22142,13 +22142,7 @@ const Layout = ({
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", {
     className: "flex justify-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "mx-2 my-4 hidden lg:block lg:my-6 rounded bg-white w-72 shadow-sm"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "p-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "text-gray-900 text-lg text-base"
-  }, "Projects"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "mx-2 my-4 lg:my-6 rounded bg-white max-w-4xl w-full shadow-sm"
+    className: "mx-2 my-4 lg:mx-4 lg:my-6 rounded bg-white max-w-3xl w-full shadow-sm"
   }, children)));
 };
 
@@ -22417,7 +22411,7 @@ function Template({
   } = markdownRemark;
   console.log(html);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, {
-    page: frontmatter.slug
+    page: frontmatter.title
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "p-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
@@ -22425,17 +22419,7 @@ function Template({
     dangerouslySetInnerHTML: {
       __html: html
     }
-  }))) // <div className="blog-post-container">
-  //   <div className="blog-post">
-  //     <h1>{frontmatter.title}</h1>
-  //     <h2>{frontmatter.date}</h2>
-  //     <div
-  //       className="blog-post-content"
-  //       dangerouslySetInnerHTML={{ __html: html }}
-  //     />
-  //   </div>
-  // </div>
-  ;
+  })));
 }
 const pageQuery = "1238545120";
 

@@ -9,7 +9,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   console.log(html)
   return (
-    <Layout page={frontmatter.slug}>
+    <Layout page={frontmatter.title}>
       <div className="p-4">
         <article
           className="prose"
@@ -17,16 +17,6 @@ export default function Template({
         />
       </div>
     </Layout>
-    // <div className="blog-post-container">
-    //   <div className="blog-post">
-    //     <h1>{frontmatter.title}</h1>
-    //     <h2>{frontmatter.date}</h2>
-    //     <div
-    //       className="blog-post-content"
-    //       dangerouslySetInnerHTML={{ __html: html }}
-    //     />
-    //   </div>
-    // </div>
   )
 }
 

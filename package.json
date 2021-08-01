@@ -21,6 +21,8 @@
     "gatsby": "^3.10.2",
     "gatsby-plugin-gatsby-cloud": "^2.10.1",
     "gatsby-plugin-manifest": "^3.10.0",
+    "gatsby-plugin-sharp": "^3.10.2",
+    "gatsby-remark-images": "^5.7.0",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-remark": "^4.7.0",
     "react": "^17.0.1",

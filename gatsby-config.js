@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
-    title: 'My Portfolio',
+    title: 'Isaac Murtagh\'s Portfolio',
   },
   plugins: [
     'gatsby-plugin-gatsby-cloud',
@@ -16,9 +16,22 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown-pages',
-        path: `${__dirname}/src/markdown-pages`,
+        path: `${__dirname}/src/markdown-pages/projects`,
       },
     },
-    'gatsby-transformer-remark',
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
   ],
 };
