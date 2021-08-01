@@ -1,0 +1,9 @@
+@layer components {
+
+  h1 {
+    @apply
+      text-gray-800
+      text-xl
+    ;
+  }
+}
