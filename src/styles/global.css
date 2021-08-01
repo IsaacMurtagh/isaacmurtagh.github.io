@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer components {
+
+  h1 {
+    @apply
+      text-gray-800
+      text-2xl
+      mb-4
+    ;
+  }
+} */
+
 @layer components {
 
   .btn-nav {

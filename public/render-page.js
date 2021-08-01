@@ -15,7 +15,8 @@
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js")),
-  "component---src-pages-index-js": preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))
+  "component---src-pages-index-js": preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")),
+  "component---src-pages-markdown-remark-frontmatter-slug-js": preferDefault(__webpack_require__(/*! ./src/pages/{MarkdownRemark.frontmatter__slug}.js */ "./src/pages/{MarkdownRemark.frontmatter__slug}.js"))
   }
 
 
@@ -22136,7 +22137,9 @@ const Layout = ({
 }) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "min-h-screen bg-gray-100"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_navbar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_navbar__WEBPACK_IMPORTED_MODULE_1__.default, {
+    page: page
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", {
     className: "flex justify-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "mx-2 my-4 hidden lg:block lg:my-6 rounded bg-white w-72 shadow-sm"
@@ -22179,18 +22182,18 @@ __webpack_require__.r(__webpack_exports__);
 const solutions = [{
   name: 'Home',
   description: 'Take me home, Country Road...',
-  href: '##',
-  icon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__.HomeIcon
-}, {
-  name: 'Github',
-  description: 'This site is open source, have a look at how i\'ve created it.',
-  href: '##',
-  icon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__.CodeIcon
+  link: '/',
+  icon: _heroicons_react_Outline__WEBPACK_IMPORTED_MODULE_3__.HomeIcon
 }, {
   name: 'Projects',
   description: 'A list of my projects i\'ve been working on',
-  href: '##',
+  link: '/',
   icon: _heroicons_react_Outline__WEBPACK_IMPORTED_MODULE_3__.PresentationChartBarIcon
+}, {
+  name: 'Github',
+  description: 'This site is open source, have a look at how i\'ve created it.',
+  link: '/',
+  icon: _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__.CodeIcon
 }];
 
 const navbar = () => {
@@ -22227,7 +22230,8 @@ const navbar = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex items-center justify-center flex-shrink-0 w-10 h-10 sm:h-12 sm:w-12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(item.icon, {
-    "aria-hidden": "true"
+    "aria-hidden": "true",
+    className: "text-sky-400"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "ml-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
@@ -22243,9 +22247,9 @@ const navbar = () => {
     className: "flex items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "text-sm font-medium text-gray-900"
-  }, "Documentation")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  }, "Get in contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "block text-sm text-gray-500"
-  }, "Start integrating products and tools")))))))));
+  }, "Isaactheomurtagh@gmail.com")))))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navbar);
@@ -22265,33 +22269,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/solid */ "./node_modules/@heroicons/react/solid/esm/index.js");
-/* harmony import */ var _navMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navMenu */ "./src/components/navMenu.js");
+/* harmony import */ var _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @heroicons/react/solid */ "./node_modules/@heroicons/react/solid/esm/index.js");
+/* harmony import */ var _navMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navMenu */ "./src/components/navMenu.js");
 
 
 
 
-const navigation = [{
-  name: 'Home',
-  path: '/'
-}, {
-  name: 'Projects',
-  path: '/'
-}];
-
-const navbar = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "bg-gradient-to-r from-sky-700 to-cyan-500 p-4 lg:px-8"
+const navbar = ({
+  page
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "bg-gradient-to-r from-sky-700 to-cyan-500 p-4 lg:px-8 pb-16"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex space-x-4 items-center text-gray-200"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_2__.CodeIcon, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_1__.CodeIcon, {
     className: "h-12 w-12"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "text-xl"
   }, "Isaac Murtagh"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex flex-grow"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_navMenu__WEBPACK_IMPORTED_MODULE_3__.default, null))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_navMenu__WEBPACK_IMPORTED_MODULE_2__.default, null))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navbar);
@@ -22370,17 +22367,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 
 
 
 
 const IndexPage = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "hello"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, {
+    page: "Home"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "p-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/projects/serverless-quizzes/"
+  }, "Serverless quizzes")));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
+
+/***/ }),
+
+/***/ "./src/pages/{MarkdownRemark.frontmatter__slug}.js":
+/*!*********************************************************!*\
+  !*** ./src/pages/{MarkdownRemark.frontmatter__slug}.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Template)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+
+
+function Template({
+  data // this prop will be injected by the GraphQL query below.
+
+}) {
+  const {
+    markdownRemark
+  } = data; // data.markdownRemark holds your post data
+
+  const {
+    frontmatter,
+    html
+  } = markdownRemark;
+  console.log(html);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, {
+    page: frontmatter.slug
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "p-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
+    className: "prose",
+    dangerouslySetInnerHTML: {
+      __html: html
+    }
+  }))) // <div className="blog-post-container">
+  //   <div className="blog-post">
+  //     <h1>{frontmatter.title}</h1>
+  //     <h2>{frontmatter.date}</h2>
+  //     <div
+  //       className="blog-post-content"
+  //       dangerouslySetInnerHTML={{ __html: html }}
+  //     />
+  //   </div>
+  // </div>
+  ;
+}
+const pageQuery = "1238545120";
 
 /***/ }),
 
