@@ -48,8 +48,8 @@ of the css that is being used.
 ## Architectural Decisions
 
 My vision for this portfolio site is to allow me to write a markdown file, upload it and not have to
-do anything else. I structured the site in a way that markdown files are programmatically created into
-routes in my site, without having to do anything else.
+do anything else. I structured the site in a way that the blog posts are declarative. I only need to
+add an md file in a folder and a new route is created for it.
 
 I've used a layout component to hold the layout of a file, so that on each page I wrap the content
 so each page is consistent with the other. In Vue, where I'm coming from, it's a single page application,
