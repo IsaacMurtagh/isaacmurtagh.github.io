@@ -15,7 +15,8 @@
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js")),
-  "component---src-pages-index-js": preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))
+  "component---src-pages-index-js": preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")),
+  "component---src-pages-markdown-remark-frontmatter-slug-js": preferDefault(__webpack_require__(/*! ./src/pages/{MarkdownRemark.frontmatter__slug}.js */ "./src/pages/{MarkdownRemark.frontmatter__slug}.js"))
   }
 
 
@@ -22113,6 +22114,33 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./src/components/chip.js":
+/*!********************************!*\
+  !*** ./src/components/chip.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const Chip = ({
+  name
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "inline-block bg-yellow-50 border-yellow-300 border rounded px-2 py-1 text-sm text-gray-600"
+  }, name);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Chip);
+
+/***/ }),
+
 /***/ "./src/components/layout.js":
 /*!**********************************!*\
   !*** ./src/components/layout.js ***!
@@ -22559,6 +22587,59 @@ const IndexPage = ({
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
 const pageQuery = "3145733783";
+
+/***/ }),
+
+/***/ "./src/pages/{MarkdownRemark.frontmatter__slug}.js":
+/*!*********************************************************!*\
+  !*** ./src/pages/{MarkdownRemark.frontmatter__slug}.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Template)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+/* harmony import */ var _components_chip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/chip */ "./src/components/chip.js");
+
+
+
+function Template({
+  data
+}) {
+  const {
+    markdownRemark
+  } = data;
+  const {
+    frontmatter,
+    html
+  } = markdownRemark;
+  const {
+    tags,
+    title
+  } = frontmatter;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__.default, {
+    page: title
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "p-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-4 space-y-2"
+  }, tags.map((tag, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_chip__WEBPACK_IMPORTED_MODULE_2__.default, {
+    className: "ml-2",
+    key: i,
+    name: tag
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
+    className: "prose",
+    dangerouslySetInnerHTML: {
+      __html: html
+    }
+  })));
+}
+const pageQuery = "2333378378";
 
 /***/ }),
 
