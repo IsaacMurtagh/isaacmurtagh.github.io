@@ -3,10 +3,15 @@ import { Link } from 'gatsby'
 
 const projects = [
   {
+    title: 'My Portfolio Site',
+    link: '/projects/serverless-quizzes/',
+    preview: 'Using Gatsby, I create my own site to serve as a platform for showing off the cool things I\'m working on.',
+  },
+  {
     title: 'Serverless Quiz Game',
     link: '/projects/serverless-quizzes/',
     preview: 'I used AWS to create a serverless API for multi choice quizzes you can play with your friends online, in real time!',
-  }
+  },
 ]
 
 const SideFeed = () => {

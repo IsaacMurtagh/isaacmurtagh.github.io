@@ -14,7 +14,9 @@ const IndexPage = ({
         <div className="text-gray-900 text-3xl text-base mb-4">
           Featured Projects
         </div>
-        {edges.map((edge, i) => <PostPreview key={i} post={edge.node} />)}
+        <div className="space-y-8">
+          {edges.map((edge, i) => <PostPreview key={i} post={edge.node} />)}
+        </div>
       </div>
     </Layout>
   )
