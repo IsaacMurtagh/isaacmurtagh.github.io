@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from './link';
 import { MenuIcon, CodeIcon } from '@heroicons/react/solid'
-import { DesktopComputerIcon, HomeIcon } from '@heroicons/react/Outline'
+import { DesktopComputerIcon, HomeIcon } from '@heroicons/react/outline'
 import { Popover, Transition } from '@headlessui/react'
 
 const menuItems = [
@@ -76,7 +76,7 @@ const navbar = () => {
                   </div>
                   <div className="p-4 bg-gray-50">
                     <a
-                      href="##"
+                      href="mailto:isaactheomurtagh@gmail.com"
                       className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <span className="flex items-center">
