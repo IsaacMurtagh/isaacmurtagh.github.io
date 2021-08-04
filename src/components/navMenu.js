@@ -60,8 +60,8 @@ const navbar = () => {
                         to={item.link}
                         className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       >
-                        <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 sm:h-12 sm:w-12">
-                          <item.icon aria-hidden="true" className="text-sky-400"/>
+                        <div className="flex items-center justify-center flex-shrink-0">
+                          <div><item.icon className="text-sky-400 w-10 h-10 sm:12 lg:12"/></div>
                         </div>
                         <div className="ml-4">
                           <p className="text-sm font-medium text-gray-900">
