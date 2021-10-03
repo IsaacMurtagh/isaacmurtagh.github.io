@@ -1,10 +1,11 @@
 module.exports = {
+  pathPrefix: "/portfolio-gatsby",
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
+    siteUrl: 'https://isaacmurtagh.github.io/',
     title: 'Isaac Murtagh\'s Portfolio',
+    
   },
   plugins: [
-    'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-manifest',
