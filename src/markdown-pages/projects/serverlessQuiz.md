@@ -14,7 +14,7 @@ author: 'Isaac Murtagh'
 I used AWS to create a serverless API for multi choice quizzes you can play with your friends.
 Using Amazons Lambda and API Gateway, players of the game are able to share a link with their friends,
 establish a web socket connection to my backend and have new rounds broadcasted to them in real
-time! You can check out my final web app at [app.admiradoco.com](https://app.admiradoco.com)
+time! You can check out my final web app at [https://isaacmurtagh.github.io/PartyGames_Client/](https://isaacmurtagh.github.io/PartyGames_Client/)
 
 ## The Beginnings
 
@@ -240,3 +240,8 @@ async function sendRounds({ game, event}) {
   return;
 }
 ````
+
+## Resources
+Find the code to the frontend and backend on my github  
+* https://github.com/IsaacMurtagh/PartyGames_Client
+* https://github.com/IsaacMurtagh/PartyGames_Server

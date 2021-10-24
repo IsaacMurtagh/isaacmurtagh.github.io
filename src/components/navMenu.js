@@ -14,7 +14,7 @@ const menuItems = [
   {
     name: 'My Web App',
     description: 'I created a quiz game you can play with friends',
-    link: 'https://app.admiradoco.com',
+    link: 'https://isaacmurtagh.github.io/PartyGames_Client/',
     icon: DesktopComputerIcon,
   },
   {
