@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 const projects = [
   {
     title: 'My Portfolio Site',
-    link: '/projects/serverless-quizzes/',
+    link: '/projects/my-portfolio-site',
     preview: 'Using Gatsby, I create my own site to serve as a platform for showing off the cool things I\'m working on.',
   },
   {
@@ -18,7 +18,7 @@ const SideFeed = () => {
   return (
   <div className="p-4">
     <div className="text-gray-900 text-xl text-base">
-      Projects
+      Featured
     </div>
     <div className="flow-root mt-6">
       <ul className="-my-5 divide-y divide-gray-200">
