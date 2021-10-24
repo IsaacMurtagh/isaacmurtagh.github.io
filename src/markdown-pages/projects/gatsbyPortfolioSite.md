@@ -11,10 +11,8 @@ author: 'Isaac Murtagh'
 
 ## Tldr;
 
-I've done some projects in the past and intend on doing some more in the future. This portfolio site
-I've built should give me the change to reflect on own self learnings and visibility over what things
-I have worked on!
-
+Using Gatsby (for the first time) I've created a portfolio site where I can share projects i've
+been working on, talk about technologies i've tried or blog about things I find interesting.
 
 ## My Motivation
 I decided to create my own portfolio site after having completed a large end to end project using
@@ -56,7 +54,7 @@ so each page is consistent with the other. In Vue, where I'm coming from, it's a
 so you have an entry point, App.Vue, then the routes (or pages) in your website sit inside that
 component.
 
-![lambda-ide](./vue-vs-gatsby-routing.png)
+![routing](./images/vue-vs-gatsby-routing.png)
 
 ## Intended workflows
 

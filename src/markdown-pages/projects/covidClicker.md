@@ -23,7 +23,7 @@ with a wide array of animations.
 
 ## The game in a nut shell
 
-![covid-clicker game](./covid-clicker.png)
+![covid-clicker game](./images/covid-clicker.png)
 
 1. Arrive on the main screen and admire the neat artwork (credit someone else)
 2. Click on the world to infect a person (community case)
@@ -35,7 +35,7 @@ with a wide array of animations.
 What I wanted to do, was make clicking the world addictive. When clicking, a little covid image
 appears, and floats off.
 
-![covid-clicker animation](./covid-animation.png)
+![covid-clicker animation](./images/covid-animation.png)
 
 This works by
 1. Clicking the world registers an on click event.

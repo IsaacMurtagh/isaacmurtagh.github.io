@@ -2,7 +2,7 @@
 slug: "/projects/serverless-quizzes/"
 date: "2021-08-01"
 title: "Serverless Quiz Game"
-tags: ['AWS Lambda', 'AWS Api Gateway', 'AWS Cloudformation', 'DynamoDb', 'Node.js']
+tags: ['AWS Lambda', 'AWS Api Gateway', 'AWS Cloudformation', 'DynamoDb', 'Serverless', 'Node.js', 'Open source']
 type: 'project'
 author: 'Isaac Murtagh'
 ---
@@ -166,7 +166,7 @@ things that really started to speed up my feedback loop.
 Firstly, don't be afraid to debug inside the Lambda itself. The AWS Console for Lambda provides
 an IDE, a way to run test events against your lambda and a one click deploy within seconds that will
 allow you to rapidly comment out code and insert logging to narrow down the cause.
-![lambda-ide](./lambda-ide.png)
+![lambda-ide](./images/lambda-ide.png)
 
 Secondly, you can greatly improve your workflow by having feature tests. You can mock the request
 given to function from the API Gateway by calling the function with a body with same key names.
